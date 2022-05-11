@@ -1,0 +1,8 @@
+name: wandb_survival_streamlit
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - cloudpathlib[s3]
+  - lifelines
+  - scikit-learn
