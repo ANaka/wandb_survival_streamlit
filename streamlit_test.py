@@ -10,7 +10,7 @@ import altair as alt
 
 @st.cache(hash_funcs={lifelines.fitters.coxph_fitter.CoxPHFitter: lambda _: None})
 def load_model(
-    s3_uri='s3://data-sci/canine_survival_models/streamlit_test.pkl',
+    s3_uri='s3://loyal-public-bucket-not-secure/20220511_streamlit_survival_model.pkl',
     ):
     client = cloudpathlib.S3Client()
     fp = client.CloudPath(s3_uri)
