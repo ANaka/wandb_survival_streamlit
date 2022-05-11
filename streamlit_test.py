@@ -12,8 +12,7 @@ import altair as alt
 def load_model(
     s3_uri='s3://loyal-public-bucket-not-secure/20220511_streamlit_survival_model.pkl',
     ):
-    client = cloudpathlib.S3Client()
-    fp = client.CloudPath(s3_uri)
+    fp = cloudpathlib.CloudPath(s3_uri)
     with open(fp, "rb") as f:
         return pickle.load(f)
 
