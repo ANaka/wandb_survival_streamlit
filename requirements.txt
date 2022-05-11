@@ -1,0 +1,5 @@
+lifelines
+scikit-learn
+numpy
+wandb
+cloudpathlib[s3]
