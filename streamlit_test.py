@@ -1,6 +1,5 @@
 
 import streamlit as st
-import cloudpathlib
 import pickle
 import pandas as pd
 from matplotlib import pyplot as plt
@@ -9,11 +8,8 @@ import lifelines
 import altair as alt
 
 @st.cache(hash_funcs={lifelines.fitters.coxph_fitter.CoxPHFitter: lambda _: None})
-def load_model(
-    s3_uri='s3://loyal-public-bucket-not-secure/20220511_streamlit_survival_model.pkl',
-    ):
-    fp = cloudpathlib.CloudPath(s3_uri)
-    with open(fp, "rb") as f:
+def load_model(path='20220511_streamlit_survival_model.pkl'):
+    with open(path, "rb") as f:
         return pickle.load(f)
 
 model = load_model()
