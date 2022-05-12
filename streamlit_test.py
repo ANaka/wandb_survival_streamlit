@@ -2,7 +2,7 @@
 import streamlit as st
 import pickle
 import pandas as pd
-from matplotlib import pyplot as plt
+import lifelines
 import numpy as np
 import altair as alt
 
