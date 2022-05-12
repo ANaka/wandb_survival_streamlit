@@ -4,10 +4,8 @@ import pickle
 import pandas as pd
 from matplotlib import pyplot as plt
 import numpy as np
-import lifelines
 import altair as alt
 
-@st.cache(hash_funcs={lifelines.fitters.coxph_fitter.CoxPHFitter: lambda _: None})
 def load_model(path='20220511_streamlit_survival_model.pkl'):
     with open(path, "rb") as f:
         return pickle.load(f)
