@@ -1,2 +1,2 @@
-lifelines
+lifelines==0.27
 scikit-learn
